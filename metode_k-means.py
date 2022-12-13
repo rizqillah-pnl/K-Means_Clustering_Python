@@ -2,6 +2,8 @@
 import numpy as np
 import os
 
+# Dataset CSV
+
 
 def get_dataset():
     # dataset klasterisasi
@@ -9,6 +11,8 @@ def get_dataset():
     dataset = np.genfromtxt(filename, delimiter=",")
     print("DATA POINT :\n", dataset)
     return dataset
+
+# Nila Centroids
 
 
 def get_centroids():
@@ -21,6 +25,7 @@ def get_centroids():
     return np.array(centroids)
 
 
+# Fungsi Euclidean Distance
 def hitung_euclidean_distance(dataset, centroid):
     return np.sqrt(np.sum((dataset - centroid)**2))
 
